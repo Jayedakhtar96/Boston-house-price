@@ -1,0 +1,98 @@
+<html>
+
+<head>
+
+<title>Boston house prices</title>
+<style>
+body{
+background-image:url("boston.jpg");
+ackground-size: cover;
+}
+form {
+text-align :center
+
+}
+
+input{
+width :50%
+}
+input[type=submit] {
+  background-color: green;
+  color: white;
+  width: 10%
+}
+
+select{
+width :50%
+}
+</style>
+</head>
+<body>
+<center><img src="/static/boston.jpg" alt="boston",width="200" height="200">
+<img src="/static/boston.png" alt="boston",width="200" height="200"></center>
+<center><h1> Boston house prices: {{ results}} </h1></center>
+
+<form action="{{ url_for('predict')}}" method="post">
+
+
+<label for ="CRIM">CRIM</label>
+<input type='text' id='CRIM', name='CRIM', required='required', placeholder = 'Enter the number...'/>
+
+<br></br>
+
+<label for ="ZN">ZN</label>
+<input type='text' id='ZN', name='ZN', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+<label for ="INDUS">INDUS</label>
+<input type='text' id='INDUS', name='INDUS', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+<label for ="CHAS">CHAS</label>
+<input type='text' id='CHAS', name='CHAS', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+<label for ="NOX">NOX</label>
+<input type='text' id='NOX', name='NOX', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+
+<label for ="RM">RM</label>
+<input type='text' id='RM', name='RM', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+<label for ="AGE">AGE</label>
+<input type='text' id='AGE', name='AGE', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+<label for ="DIS">DIS</label>
+<input type='text' id='DIS', name='DIS', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+<label for ="RAD">RAD</label>
+<input type='text' id='RAD', name='RAD', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+
+<label for ="TAX">TAX</label>
+<input type='text' id='TAX', name='TAX', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+<label for ="PTRATIO">PTRATIO</label>
+<input type='text' id='PTRATIO', name='PTRATIO', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+
+<label for ="LSTAT">LSTAT</label>
+<input type='text' id='LSTAT', name='LSTAT', required='required', placeholder = 'Enter the number...' />
+<br></br>
+
+<label></label>
+<input id="submit" type="submit" value="Predict" ></input>
+
+</form>
+
+</body>
+
+
+</html>
